@@ -1,0 +1,161 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  position: absolute;
+  color: white;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: #c88a36;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icons .icon2 {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.cart-badge {
+  background: red;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  right: 85px;
+}
+
+.icon1 {
+  color: #fff;
+}
+
+.navbar-toggler {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.search-form input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  width: 280px;
+}
+
+.search-form button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #c88a36;
+  color: white;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .navbar-toggler.left {
+    right: auto;
+    left: 20px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 90%;
+    background: #764b36;
+    text-align: center;
+    padding: 20px;
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .nav-links.nav-open {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .icons.icons-open {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+}
