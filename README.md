@@ -1,9 +1,10 @@
-# creamify-store-e-commerce-website
+# Creamify-store-e-commerce-website
 
-Welcome to **CreamSkincare**, a modern and responsive e-commerce web application built with **React**, focused on promoting and selling skincare products. This project simulates a clean and user-friendly shopping experience with dynamic product listings, a cart system, and detailed product views.
+Welcome to **Creamify Store**, a modern and responsive e-commerce web application built with **React**, focused on promoting and selling skincare products. This project simulates a clean and user-friendly shopping experience with dynamic product listings, a cart system, and detailed product views.
 
 ---
-<img width="1920" height="1080" alt="Screenshot (736)" src="https://github.com/user-attachments/assets/e11a45da-b843-4554-8cd2-956bce20db14" />
+<img width="1860" height="904" alt="Screenshot (736)" src="https://github.com/user-attachments/assets/9ae1343b-264c-427f-bf5c-f6803b06e946" />
+
 
 ## 🌟 Project Overview
 
@@ -63,10 +64,3 @@ CreamSkincare is a frontend-only application that showcases a collection of skin
 
 ### 🧪 Component-Based Architecture
 - Reusable components: `Header`, `Footer`.
-
----
-
-## 🚀 Getting Started
-
-npm install
-
