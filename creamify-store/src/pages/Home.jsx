@@ -11,6 +11,10 @@ import cream5 from "../assets/cream5.png";
 import cream6 from "../assets/cream6.png";
 import cream7 from "../assets/cream7.png";
 import cream8 from "../assets/cream8.png";
+import cream9 from "../assets/cream9.png";
+import cream10 from "../assets/cream10.png";
+import cream11 from "../assets/cream11.png";
+import cream12 from "../assets/cream12.png";
 import { FaHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 import {
   MdOutlineKeyboardArrowLeft,
@@ -18,8 +22,11 @@ import {
 } from "react-icons/md";
 import Footer from "../components/Footer";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
@@ -39,7 +46,7 @@ const Home = () => {
     },
     {
       id: 2,
-      name: "Sun whitening body lotion",
+      name: "Sun whitening lotion",
       price: "Rs.3200",
       image: cream2,
     },
@@ -60,7 +67,7 @@ const Home = () => {
     },
     {
       id: 2,
-      name: "Sun whitening body lotion",
+      name: "Sun whitening lotion",
       price: "Rs.3200",
       image: cream2,
     },
@@ -89,6 +96,25 @@ const Home = () => {
       name: "Fair and Natural Fairness Cream",
       price: "Rs.2600",
       image: cream8,
+    },
+    {
+      id: 9,
+      name: "Night Moisturizer",
+      price: "Rs.1990",
+      image: cream9,
+    },
+    {
+      id: 10,
+      name: "Anti aging cream",
+      price: "Rs.3300",
+      image: cream10,
+    },
+    { id: 11, name: "Vaseline Lotion", price: "Rs.3200", image: cream11 },
+    {
+      id: 12,
+      name: "Fair and Natural Fairness Cream",
+      price: "Rs.2600",
+      image: cream12,
     },
   ];
 
@@ -122,10 +148,10 @@ const Home = () => {
             <MdOutlineKeyboardArrowLeft />
           </button>
           <div className="brand-logos" ref={sliderRef}>
-            <img src={NiveaLogo} alt="Adidas" />
-            <img src={PrevenseLogo} alt="Nike" />
-            <img src={JanetLogo} alt="Puma" />
-            <img src={VaselineLogo} alt="New Balance" />
+            <img src={NiveaLogo} alt="Nivea" />
+            <img src={PrevenseLogo} alt="Prevense" />
+            <img src={JanetLogo} alt="Janet" />
+            <img src={VaselineLogo} alt="Vaseline" />
           </div>
           <button className="brand-nav right" onClick={scrollRight}>
             <MdOutlineKeyboardArrowRight />
@@ -138,15 +164,22 @@ const Home = () => {
         <h2>Trending Products</h2>
         <div className="product-grid">
           {trendingProducts.map((product) => (
-            <div key={product.id} className="product-card">
+            // <div key={product.id} className="product-card">
+            <div
+              key={product.id}
+              className="product-card"
+              onClick={() => navigate(`/product/${product.id}`)}
+              style={{ cursor: "pointer" }}>
               <img src={product.image} alt={product.name} />
               <div className="product-info">
                 <span className="product-rating">
                   <FaStar className="star-icon" /> (11.4K Reviews)
                 </span>
                 <h3>{product.name}</h3>
+
                 <p className="product-price">
-                  {product.price} <span className="sold-out">Sold out 85%</span>
+                  {product.price} <br />
+                  <span className="sold-out">Sold out 85%</span>
                 </p>
                 <div className="product-icons">
                   <FaHeart className="heart-icon" />
@@ -181,7 +214,11 @@ const Home = () => {
         <h2>Available Collections</h2>
         <div className="product-grid">
           {availableCollections.map((product) => (
-            <div key={product.id} className="product-card">
+            <div
+              key={product.id}
+              className="product-card"
+              onClick={() => navigate(`/product/${product.id}`)}
+              style={{ cursor: "pointer" }}>
               <img src={product.image} alt={product.name} />
               <div className="product-info">
                 <span className="product-rating">
@@ -189,7 +226,8 @@ const Home = () => {
                 </span>
                 <h3>{product.name}</h3>
                 <p className="product-price">
-                  {product.price} <span className="sold-out">Sold out 85%</span>
+                  {product.price} <br />
+                  <span className="sold-out">Sold out 85%</span>
                 </p>
                 <div className="product-icons">
                   <FaHeart className="heart-icon" />
