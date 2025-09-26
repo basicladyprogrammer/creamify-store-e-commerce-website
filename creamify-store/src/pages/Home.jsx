@@ -15,6 +15,7 @@ import cream9 from "../assets/cream9.png";
 import cream10 from "../assets/cream10.png";
 import cream11 from "../assets/cream11.png";
 import cream12 from "../assets/cream12.png";
+import decor1 from "../assets/creamdec1.png";
 import { FaHeart, FaShoppingCart, FaStar } from "react-icons/fa";
 import {
   MdOutlineKeyboardArrowLeft,
@@ -120,6 +121,10 @@ const Home = () => {
 
   return (
     <div className="home">
+      <div className="page-decor" aria-hidden="true">
+        <img src={decor1} className="decor decor-left-1" alt="" />
+        <img src={decor1} className="decor decor-right-1" alt="" />
+      </div>
       <div className="hero">
         <section className="hero-section">
           <div className="bgded-overlay">
@@ -132,8 +137,16 @@ const Home = () => {
                 Creamify has the perfect match for your skin.
               </p>
               <div className="hero-buttons">
-                <button className="shop-now">Shop Now</button>
-                <button className="more-info">More Info</button>
+                <button
+                  className="shop-now"
+                  onClick={() => navigate("/product/1")}>
+                  Shop Now
+                </button>
+                <button
+                  className="more-info"
+                  onClick={() => navigate("/product/1")}>
+                  More Info
+                </button>
               </div>
             </div>
           </div>
