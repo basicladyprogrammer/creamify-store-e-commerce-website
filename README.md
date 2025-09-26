@@ -2,9 +2,7 @@
 
 Welcome to **Creamify Store**, a modern and responsive e-commerce web application built with **React**, focused on promoting and selling skincare products. This project simulates a clean and user-friendly shopping experience with dynamic product listings, a cart system, and detailed product views.
 
----
-<img width="1860" height="904" alt="Screenshot (736)" src="https://github.com/user-attachments/assets/9ae1343b-264c-427f-bf5c-f6803b06e946" />
-
+<img width="1868" height="900" alt="Screenshot (738)" src="https://github.com/user-attachments/assets/02f1d939-824c-41e1-b96e-46ba86e09c8b" />
 
 ## 🌟 Project Overview
 
